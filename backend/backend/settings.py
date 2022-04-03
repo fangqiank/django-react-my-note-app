@@ -144,14 +144,14 @@ STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-if "DYNO" in os.environ:
-    STATIC_ROOT = 'static'
-    ALLOWED_HOSTS = ['*']
-    DEBUG = False
-    SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
-    SECURE_SSL_REDIRECT = True
-    SESSION_COOKIE_SECURE = True
-    CSRF_COOKIE_SECURE = True
+# if "DYNO" in os.environ:
+#     STATIC_ROOT = 'static'
+#     ALLOWED_HOSTS = ['*']
+#     DEBUG = False
+#     SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
+#     SECURE_SSL_REDIRECT = True
+#     SESSION_COOKIE_SECURE = True
+#     CSRF_COOKIE_SECURE = True
 
 # replace sqllite with postgresq
 if 'DATABASE_URL' in os.environ:
